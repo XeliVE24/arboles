@@ -8,4 +8,17 @@ class nodo ():
     def __str__(self):
         return f"Valor:{self.valor} ,izq:{self.izq} ,der:{self.der}"
 
-pass
+
+    def getArbol(self):
+        strOut =""
+        strOut += f" NP {(self.valor)}"
+        
+        if type(self.izq) != type (None):
+            strOut += f"[{self.valor}]-> [{self.izq}]"
+        
+        if self.der is not None :
+            strOut +=f"[{self.valor}-> [{self.der}]]"
+        return strOut
+
+    def __str__ (self):
+        return f"Valor:{self.valor}"
