@@ -58,17 +58,6 @@ for i in range (0,len(arrNodos),1):
 pass
 
 
-
-def Printarbol(nodo):
-
-    if nodo is not None:
-        nodoPadre=nodo
-        print(nodoPadre.getArbol())
-        Printarbol(nodoPadre.izq)
-        Printarbol(nodoPadre.der)
-
-    return 0
-
   
 
 #nodoOrdenados(nodoRaiz,nodo9)

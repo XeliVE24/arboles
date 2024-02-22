@@ -69,3 +69,14 @@ def nodoOrdenados(nodoPadre,newNodo):
             
     pass
 #------------fin---------------
+
+
+def Printarbol(nodo):
+
+    if nodo is not None:
+        nodoPadre=nodo
+        print(nodoPadre.getArbol())
+        Printarbol(nodoPadre.izq)
+        Printarbol(nodoPadre.der)
+
+    return 0
