@@ -36,37 +36,59 @@ print("PostOrder:")
 print (PostOrderArr)
 
 print("-------------------------------------------------------------------------------")
+arrNodos=[16,5,7,12,9,20,18,3,10,14]
+nodoRaiz= None
+#nodoRaiz=nodo(16)
+#nodo9=nodo(5)
+#nodo10=nodo(7)
+#nodo11=nodo(12)
+#nodo12=nodo(9)
+#nodo13=nodo(20)
+#nodo14=nodo(18)
+#nodo15=nodo(3)
+#nodo16=nodo(10)
+#nodo17=nodo(14)
 
-nodoRaiz=nodo(16)
-nodo9=nodo(5)
-nodo10=nodo(7)
-nodo11=nodo(12)
-nodo12=nodo(9)
-nodo13=nodo(20)
-nodo14=nodo(18)
-nodo15=nodo(3)
-nodo16=nodo(10)
-nodo17=nodo(14)
-
-
-nodoOrdenados(nodoRaiz,nodo9)
-nodoOrdenados(nodoRaiz,nodo10)
-nodoOrdenados(nodoRaiz,nodo11)
-nodoOrdenados(nodoRaiz,nodo12)
-nodoOrdenados(nodoRaiz,nodo13)
-nodoOrdenados(nodoRaiz,nodo14)
-nodoOrdenados(nodoRaiz,nodo15)
-nodoOrdenados(nodoRaiz,nodo16)
-nodoOrdenados(nodoRaiz,nodo17)
+for i in range (0,len(arrNodos),1):
+    if i == 0 :
+        nodoRaiz = nodo (arrNodos[i])
+    else:
+        nodoOrdenados(nodoRaiz,nodo(arrNodos[i]))
+        
+pass
 
 
-print(nodoRaiz.getArbol())
-print(nodo9.getArbol())
-print(nodo10.getArbol())
-print(nodo11.getArbol())
-print(nodo12.getArbol())
-print(nodo13.getArbol())
-print(nodo14.getArbol())
-print(nodo15.getArbol())
-print(nodo16.getArbol())
-print(nodo17.getArbol())
+
+def Printarbol(nodo):
+
+    if nodo is not None:
+        nodoPadre=nodo
+        print(nodoPadre.getArbol())
+        Printarbol(nodoPadre.izq)
+        Printarbol(nodoPadre.der)
+
+    return 0
+
+  
+
+#nodoOrdenados(nodoRaiz,nodo9)
+#nodoOrdenados(nodoRaiz,nodo10)
+#nodoOrdenados(nodoRaiz,nodo11)
+#odoOrdenados(nodoRaiz,nodo12)
+#nodoOrdenados(nodoRaiz,nodo13)
+#nodoOrdenados(nodoRaiz,nodo14)
+#nodoOrdenados(nodoRaiz,nodo15)
+#nodoOrdenados(nodoRaiz,nodo16)
+#nodoOrdenados(nodoRaiz,nodo17)
+
+
+Printarbol(nodoRaiz)
+#(nodo9.getArbol())
+#print(nodo10.getArbol())
+#print(nodo11.getArbol())
+#print(nodo12.getArbol())
+#print(nodo13.getArbol())
+#print(nodo14.getArbol())
+#print(nodo15.getArbol())
+#print(nodo16.getArbol())
+##print(nodo17.getArbol())
