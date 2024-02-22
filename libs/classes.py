@@ -14,11 +14,11 @@ class nodo ():
         strOut += f" NP {(self.valor)}"
         
         if type(self.izq) != type (None):
-            strOut += f"[{self.valor}]-> [{self.izq}]"
+            strOut += f" iz[{self.valor}]-> [{self.izq}]"
         
         if self.der is not None :
-            strOut +=f"[{self.valor}-> [{self.der}]]"
+            strOut +=f" der[{self.valor}-> [{self.der}]]"
         return strOut
 
     def __str__ (self):
-        return f"Valor:{self.valor}"
+        return f"{self.valor}"
