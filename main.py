@@ -3,6 +3,28 @@ inOrderArr=[]
 PreOrderArr=[]
 PostOrderArr=[]
 
+
+print("_________05/03___________________")
+arrayNum=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+NodoRaiz=nodo(arrayNum[0])
+cola=[]
+
+def Agreganodos (NodoRaiz, ):
+    if NodoRaiz.izq is None:
+        NodoRaiz.izq=nodo(arrayNum[i])
+        return 0
+    if NodoRaiz.der is None:
+        NodoRaiz.der =nodo (arrayNum[i])
+        return 0 
+    
+    cola.append(currentNodo.izq)
+    cola.append(currentNodo.der)
+    currentNodo=cola.pop()
+    Agreganodos(currentNodo,)
+    return 0 
+
+
+
 nodo1 =nodo(1)
 nodo2=nodo(2)
 nodo3= nodo(3)
