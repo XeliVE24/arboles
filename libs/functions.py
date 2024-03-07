@@ -1,3 +1,5 @@
+from .classes import *
+
 def linkhijo (nodoPadre, nodoHijoiz=None , nodoHijoDer=None):
     if nodoHijoiz is not None :
         nodoPadre.izq =nodoHijoiz
@@ -80,3 +82,22 @@ def Printarbol(nodo):
         Printarbol(nodoPadre.der)
 
     return 0
+
+def Agreganodos (currentNodo,nuevoNum):
+    cola=[]
+    cola.append(currentNodo)
+
+    while cola:
+        currentNodo = cola.pop(0)
+
+        if currentNodo.izq is None:
+            currentNodo.izq= nodo(nuevoNum)
+            return 0
+        if currentNodo.der is None:
+            currentNodo.der = nodo (nuevoNum)
+            return 0 
+        
+        cola.append(currentNodo.izq)
+        cola.append(currentNodo.der)
+        
+    return 0 
